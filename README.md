@@ -44,7 +44,61 @@ Spatial-Utilization-Analysis-Using-Deep-Learning-and-Text-Mining/
 └── README.md # 프로젝트 설명서
 ```
 ---
-**Flowchart**
+## Analysis Workflow
+**Image Analysis**
 ```text
+이미지 크롤링 데이터 (.jpg)
+↓
+1_yolov8.py → YOLOv8 객체 검출
+↓
+2_csv_make.py → 라벨 파일 CSV 변환
+↓
+3_sum_confidence.py → 객체별 집계 + confidence
+↓
+4_person_count.py → 사람 객체 월별 집계
+↓
+5_sum_object.py → 분석 대상 객체 필터링
+↓
+6_object_count_confidence.py → 연간 데이터 통합
+↓
+7_object_count_month.py → 월별 비율 계산
+↓
+[결과 CSV]
+```
+**Text Analysis**
+```text
+텍스트 크롤링 데이터 (.csv)
+↓
+txt.py / txt_month.py → 네이버 블로그 크롤링
+↓
+csv_sum.py → 월별 데이터 병합
+↓
+data_mining.py → 워드 클라우드 생성
+↓
+data_mining_graph.py → 단어 빈도 분석
+↓
+[키워드 CSV]
+```
+**Statistical Analysis**
+```text
+통계 분석 시작(검증을 위해 여러 통계 방법 적용 시도)
+│
+├─ 데이터 타입이 순위형인가?
+│ ├─ YES → Spearman Rank Correlation ✓
+│ └─ NO → 다음 단계
+│
+├─ 데이터 타입이 비율(연속형)인가?
+│ ├─ YES → Spearman Proportion / Pearson
+│ │ └─ 정규성 확인 → Spearman 선택 ✓
+│ └─ NO → 다음 단계
+│
+├─ 범주형 데이터의 독립성 검정?
+│ ├─ 전체 교차분석 → Chi-Square (Cross) ✓
+│ ├─ 범주별 분석 → Chi-Square (Categorical) ✓
+│ └─ 소표본 데이터 → Fisher's Exact (참고용)
+│
+└─ 분류 일치도 측정?
+├─ 범주형 일치도 → Cohen's Kappa ✓
+└─ 순위 일치 비율 → Pairwise Comparison ✓
 ```
 ---
