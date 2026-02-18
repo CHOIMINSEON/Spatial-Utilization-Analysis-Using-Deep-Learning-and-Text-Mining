@@ -142,10 +142,15 @@ data_mining_graph.py → 단어 빈도 분석
 - 멀티모달 데이터 분석 방법론 제안
 
 ### [공간별 데이터 분류]
+
 <img width="1104" height="277" alt="image" src="https://github.com/user-attachments/assets/e3b1c411-28f5-49d9-a643-87033c287c50" />
+
 ### [공간별 사람 객체 추이]
+
 <img width="792" height="391" alt="image" src="https://github.com/user-attachments/assets/1e40188a-e769-4507-b3b3-d187a6458e95" />
+
 ### [공간별 사람 객체 수와 행정동 생활인구의 상관관계]
+
 <img width="1145" height="186" alt="image" src="https://github.com/user-attachments/assets/92ae7637-3b35-4aaf-a82e-30c49b04d887" />
 
 
