@@ -1,2 +1,3 @@
-# Spatial-Utilization-Analysis-Using-Deep-Learning-and-Text-Mining
-This study proposes a methodology to analyze spatial utilization—including visitor trends and activities—by collecting unstructured data (images and text) from three complex cultural spaces in Seoul.
+# 딥러닝과 텍스트 마이닝을 사용한 공간활용조사 방법에 관한 연구(2025)
+* 비정형 데이터(이미지, 텍스트)를 수집해 공간의 방문자 수 추이, 활동 등 공간 활용을 분석하는 방법론을 제안.
+* 서울시 복합문화공간 3곳을 대상으로 방법론을 적용해 공간활용조사를 진행.
